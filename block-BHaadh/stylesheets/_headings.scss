@@ -1,0 +1,25 @@
+/* Headings*/
+.heading {
+  font-size: 3rem;
+//   color: var(--textDark);
+  margin-bottom: 2rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.heading-secondary {
+    font-size: 2.2rem;
+}
+
+/* Text */
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.font-0 {
+    font-size: 0;
+}
