@@ -1,0 +1,118 @@
+@import "variables";
+@import "global";
+@import "headings";
+@import "flex";
+@import "reset";
+
+// 2D Box
+
+@keyframes box2d {
+    0% {
+        transform: scale(0.8);
+    }
+    20% {
+        transform: scale(0.4);
+    }
+    40% {
+        transform: scale(0.2);
+    }
+    50% {
+        transform: scale(0.6) rotate(90deg);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+.cube {
+    position: relative;
+    padding: 15rem;
+    transition: all 0.01s linear;
+    &:hover {
+        animation: box2d 2s ease-in-out 0.5s 5 normal backwards;
+    }
+}
+.side-top {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    transform: rotate(-45deg) skew(15deg, 15deg);
+}
+.side-left {
+    height: 100px;
+    width: 100px;
+    background-color:blue;
+    position: absolute;
+    transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+.side-right {
+    height: 100px;
+    width: 100px;
+    background-color:green;
+    position: absolute;
+    transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+
+// 3D Box
+
+.rotating-box {
+    height: 400px;
+    width: 400px;
+    margin: 100px auto;
+    perspective: 800px;
+}
+.cube2 {
+    width: 400px;
+    color: white;
+    font-size: 8rem;
+    text-align: center;
+    animation: rotate3d 15s linear infinite;
+    transform-style: preserve-3d;
+}
+.cube2 div {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+.cube2 div p {
+    margin-top: 8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.front {
+    background-color: black;
+    transform: translateZ(200px);
+    
+}
+.back {
+    background-color: orange;
+    transform: rotateY(180deg) translateZ(200px);
+}
+.left {
+    background-color: purple;
+    transform: rotateY(-90deg) translateX(-200px);
+    transform-origin: left;
+}
+.right {
+    background-color: blue;
+    transform: rotateY(90deg) translateX(200px);
+    transform-origin: right;
+}
+.top {
+    background-color: green;
+    transform: rotateX(-90deg) translateY(-200px);
+    transform-origin:top;
+}
+.bottom {
+    background-color: red;
+    transform: rotateX(90deg) translateY(200px);
+    transform-origin: bottom;
+}
+
+@keyframes rotate3d {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}

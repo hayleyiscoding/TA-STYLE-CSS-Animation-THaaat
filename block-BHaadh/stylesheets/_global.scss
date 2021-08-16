@@ -1,0 +1,39 @@
+/* General */
+html {
+    font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+}
+
+/* Container */
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* Padding */
+.padding {
+  padding: 5rem 0;
+}
+
+/* Full Width */
+.width-full {
+    width: 100%;
+}
+
+/* Clearfix */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+
